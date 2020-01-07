@@ -1,0 +1,3 @@
+#MutationType   Position    InsertRegion    Name
+deletion	16:215400-234700	0	SEA
+duplication	16:203016-213826	16:300000-300000	anti11
