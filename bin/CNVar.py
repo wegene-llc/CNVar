@@ -224,6 +224,7 @@ def call(args):
     if args.gc_config and args.average_depth:
         start_pos = detect_region[1] - 1000
         end_pos = detect_region[2] + 1000
+        # if MQ_cutoff != 60, filt out reads MQ lower than cutoff
         if MQ_cutoff ==  60: 
             samtools_depth_base.samtoolsDepthBase(args.bam, '%s:%s-%s' % (detect_region[0],detect_region[1],detect_region[2]), args.reference_genome, outfilename)
             with open('%s.sample.list' % outfilename,'w') as w:
